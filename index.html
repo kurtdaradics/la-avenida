@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="description" content="Draft a short letter of support for La Avenida before the City of Ventura hearing on October 19.">
+<meta property="og:title" content="Letters for La Avenida">
+<meta property="og:description" content="Draft a short letter of support for La Avenida before the City of Ventura hearing on October 19.">
+<meta property="og:type" content="website">
+<title>Letters for La Avenida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Young+Serif&display=swap">
+<style>
+  /* Layout: a writing desk. The form sits on the left and the letter on its sheet to the right; on phones they stack, letter after form. */
+  :root {
+    --fog: #ECF0EF;        /* page ground: Ventura marine layer */
+    --sheet: #FFFDF9;      /* letter paper */
+    --field: #FFFFFF;
+    --ink: #1B2A33;        /* harbor ink */
+    --muted: #56666E;
+    --rule: #C9D3D3;
+    --bloom: #B0246B;      /* bougainvillea */
+    --bloom-ink: #FFFFFF;
+    --bloom-wash: #F7E4EE;
+    --shadow: rgba(27, 42, 51, 0.16);
+    --display: "Young Serif", Georgia, "Times New Roman", serif;
+    --ui: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --letter: "Newsreader", Georgia, "Times New Roman", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fog: #0E1920; --sheet: #17242B; --field: #13212A; --ink: #E5ECEB; --muted: #9AAAB0;
+      --rule: #2C3C44; --bloom: #EE6FA6; --bloom-ink: #24101A; --bloom-wash: #3A1E2C;
+      --shadow: rgba(0, 0, 0, 0.45); color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fog: #0E1920; --sheet: #17242B; --field: #13212A; --ink: #E5ECEB; --muted: #9AAAB0;
+    --rule: #2C3C44; --bloom: #EE6FA6; --bloom-ink: #24101A; --bloom-wash: #3A1E2C;
+    --shadow: rgba(0, 0, 0, 0.45); color-scheme: dark;
+  }
+
+  body { background: var(--fog); color: var(--ink); font-family: var(--ui); font-size: 1rem; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 44px); padding-block: clamp(20px, 4vw, 44px) 64px; }
+
+  /* Hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px 24px; align-items: start; margin-bottom: clamp(28px, 4vw, 44px); }
+  .eyebrow { font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(2.1rem, 6.2vw, 3.6rem); line-height: 1.04; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+  .intro { grid-column: 1 / -1; max-width: 62ch; display: grid; gap: 12px; font-size: 1.06rem; }
+  .intro p { margin: 0; }
+  .sig { font-family: var(--display); font-size: 1.2rem; line-height: 1.3; }
+
+  .stamp { background: var(--bloom); color: var(--bloom-ink); border: 5px solid var(--bloom); outline: 4px dotted var(--fog); outline-offset: -7px;
+           padding: 14px 16px 12px; min-width: 6.6rem; text-align: center; display: grid; gap: 3px; transform: rotate(4deg);
+           box-shadow: 0 12px 26px -16px var(--shadow); margin-top: 4px; }
+  .stamp .s-small { font-size: .62rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+  .stamp .s-day { font-family: var(--display); font-size: 2rem; line-height: 1; }
+
+  /* Desk */
+  .desk { display: grid; gap: clamp(28px, 3.5vw, 44px); }
+  @media (min-width: 900px) { .desk { grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr); align-items: start; } }
+
+  .step { display: grid; gap: 18px; padding-block: 0 24px; border-bottom: 1px solid var(--rule); }
+  .step + .step { padding-top: 24px; }
+  .step:last-child { border-bottom: 0; }
+  .step-head { display: flex; align-items: baseline; gap: 10px; }
+  .step-num { font-family: var(--display); color: var(--bloom); font-size: 1.4rem; line-height: 1; min-width: 1.1em; }
+  h2 { font-size: 1.12rem; font-weight: 700; margin: 0; }
+
+  .field { display: grid; gap: 6px; min-width: 0; }
+  fieldset.field { border: 0; padding: 0; margin: 0; }
+  label, .label { font-weight: 600; font-size: .95rem; }
+  legend.label { padding: 0; margin-bottom: 6px; }
+  .hint { color: var(--muted); font-size: .88rem; margin: 0; }
+  input[type="text"], textarea { font: inherit; font-size: 1rem; color: var(--ink); background: var(--field); border: 1px solid var(--rule); border-radius: 8px; padding: 11px 12px; width: 100%; box-sizing: border-box; }
+  input::placeholder, textarea::placeholder { color: var(--muted); opacity: .8; }
+  textarea { min-height: 9.5em; resize: vertical; line-height: 1.55; }
+  input:focus-visible, textarea:focus-visible, button:focus-visible, a:focus-visible { outline: 2px solid var(--bloom); outline-offset: 2px; }
+  .row { display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 560px) { .row { grid-template-columns: auto minmax(0, 1fr); align-items: end; } }
+
+  .seg { position: relative; display: inline-flex; gap: 3px; padding: 3px; border: 1px solid var(--rule); border-radius: 999px; background: var(--field); }
+  .seg input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg label { padding: 7px 18px; border-radius: 999px; cursor: pointer; font-size: .92rem; color: var(--muted); }
+  .seg input:checked + label { background: var(--ink); color: var(--fog); }
+  .seg input:focus-visible + label { outline: 2px solid var(--bloom); outline-offset: 2px; }
+
+  .under { display: flex; justify-content: flex-end; }
+
+  /* Letter */
+  .sheet-label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: .76rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+  .sheet { background: var(--sheet); border: 1px solid var(--rule); border-radius: 3px; padding: clamp(20px, 4.5vw, 44px); font-family: var(--letter); font-size: 1.08rem; line-height: 1.6;
+           box-shadow: 0 1px 0 var(--rule), 0 24px 46px -30px var(--shadow); min-width: 0; overflow-wrap: anywhere; }
+  .sheet p { margin: 0 0 1em; }
+  .sheet p:last-child { margin-bottom: 0; }
+  .re { font-style: italic; color: var(--muted); }
+  .block { display: block; }
+  .mine { white-space: pre-wrap; }
+  .slot { background: var(--bloom-wash); color: var(--bloom); border-radius: 3px; padding: 0 .25em; font-style: italic; }
+
+  /* Send */
+  .send { margin-top: 26px; display: grid; gap: 16px; }
+  dl.addr { display: grid; grid-template-columns: 4.6rem minmax(0, 1fr); gap: 10px 12px; align-items: center; margin: 0; padding: 14px 16px; border: 1px solid var(--rule); border-radius: 8px; background: var(--field); }
+  dl.addr dt { font-size: .74rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); }
+  dl.addr dd { margin: 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 0; }
+  .addr-val { font-size: .95rem; overflow-wrap: anywhere; min-width: 0; user-select: all; }
+  .mini { font: inherit; font-size: .8rem; font-weight: 600; padding: 5px 10px; border-radius: 6px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); cursor: pointer; flex: none; }
+  .mini:hover { border-color: var(--ink); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { font: inherit; font-weight: 700; font-size: 1rem; padding: 12px 18px; min-height: 46px; border-radius: 8px; border: 1px solid transparent; cursor: pointer; text-decoration: none;
+         display: inline-flex; align-items: center; justify-content: center; }
+  .btn.primary { background: var(--bloom); color: var(--bloom-ink); }
+  .btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
+  .btn.ghost:hover { border-color: var(--ink); }
+  .btn[disabled], .btn.is-off { opacity: .45; cursor: not-allowed; pointer-events: none; }
+  .status { margin: 0; min-height: 1.5em; font-size: .93rem; color: var(--muted); }
+  .status.ok { color: var(--ink); font-weight: 600; }
+  .fallback textarea { font-family: var(--letter); min-height: 14em; }
+  .fine { margin: 0; font-size: .86rem; color: var(--muted); max-width: 62ch; }
+
+  @media (max-width: 480px) {
+    .stamp { min-width: 5.2rem; padding: 10px 10px 8px; }
+    .stamp .s-day { font-size: 1.5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+  [hidden] { display: none !important; }
+  body { margin: 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <div>
+      <p class="eyebrow">City of Ventura · Director's Hearing · PROJ-26-1045</p>
+      <h1>Letters for La Avenida</h1>
+    </div>
+    <div class="stamp" aria-hidden="true">
+      <span class="s-small">Hearing</span>
+      <span class="s-day">Oct 19</span>
+      <span class="s-small">Ventura · CA</span>
+    </div>
+    <div class="intro">
+      <p>La Avenida, Carmella McCoy's venue at 2220 North Ventura Avenue, has its hearing with the City on Monday, October 19. If you were at my 50th there last September, you know the place. A short letter helps the planner see what it means to the neighborhood.</p>
+      <p>This page drafts the letter for you. Add your name, read it over, and send it from your own email by <strong>Thursday, October 15</strong>.</p>
+      <p class="sig">Thank you,<br>Kurty</p>
+    </div>
+  </header>
+
+  <main class="desk">
+    <section aria-labelledby="h-you">
+      <form id="letter-form" novalidate>
+        <div class="step">
+          <div class="step-head"><span class="step-num">1</span><h2 id="h-you">About you</h2></div>
+          <fieldset class="field">
+            <legend class="label">Who's signing?</legend>
+            <div class="seg">
+              <input type="radio" id="who-me" name="who" value="me" checked><label for="who-me">Just me</label>
+              <input type="radio" id="who-us" name="who" value="us"><label for="who-us">Us</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="name" id="name-label">Full name</label>
+            <input id="name" type="text" autocomplete="name" placeholder="First and last name">
+          </div>
+          <div class="field">
+            <label for="street">Street address</label>
+            <input id="street" type="text" autocomplete="street-address" placeholder="Street and number">
+            <p class="hint">Optional. It shows the planner you're a neighbor.</p>
+          </div>
+          <div class="row">
+            <fieldset class="field">
+              <legend class="label" id="res-legend">Do you live in Ventura?</legend>
+              <div class="seg">
+                <input type="radio" id="res-yes" name="resident" value="yes" checked><label for="res-yes">Yes</label>
+                <input type="radio" id="res-no" name="resident" value="no"><label for="res-no">No</label>
+              </div>
+            </fieldset>
+            <div class="field" id="zip-field">
+              <label for="zip">ZIP</label>
+              <input id="zip" type="text" inputmode="numeric" maxlength="5" autocomplete="postal-code" placeholder="93001">
+            </div>
+            <div class="field" id="place-field" hidden>
+              <label for="place">Where you live</label>
+              <input id="place" type="text" autocomplete="address-level2" placeholder="City, state">
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-head"><span class="step-num">2</span><h2 id="h-story">Your story</h2></div>
+          <div class="field">
+            <label for="line">The heart of the letter</label>
+            <p class="hint" id="line-hint">I started it for you. Change anything that isn't true for you, like if you'd been to La Avenida before.</p>
+            <textarea id="line" aria-describedby="line-hint"></textarea>
+            <div class="under"><button type="button" class="mini" id="reset-story">Use the suggested text</button></div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <section aria-labelledby="h-letter">
+      <div class="sheet-label"><span id="h-letter">Your letter</span><span>Live preview</span></div>
+      <article class="sheet">
+        <p>Brian Garvey, Associate Planner<br>City of Ventura</p>
+        <p class="re">Re: La Avenida — PROJ-26-1045 — Director's Hearing, October 19, 2026</p>
+        <p>Dear Mr. Garvey,</p>
+        <p id="p-opening"></p>
+        <p><span id="p-line" class="mine"></span></p>
+        <p id="p-closing"></p>
+        <p>Sincerely,<span id="p-name" class="block"></span><span id="p-street" class="block"></span><span id="p-city" class="block"></span></p>
+      </article>
+
+      <div class="send">
+        <div class="step-head"><span class="step-num">3</span><h2>Send it from your email</h2></div>
+        <dl class="addr">
+          <dt>To</dt>
+          <dd><span class="addr-val" id="v-to"></span><button type="button" class="mini" data-copy="to" data-label="Address">Copy</button></dd>
+          <dt>Cc</dt>
+          <dd><span class="addr-val" id="v-cc"></span><button type="button" class="mini" data-copy="cc" data-label="Cc address">Copy</button></dd>
+          <dt>Subject</dt>
+          <dd><span class="addr-val" id="v-subject"></span><button type="button" class="mini" data-copy="subject" data-label="Subject">Copy</button></dd>
+        </dl>
+        <div class="actions">
+          <button type="button" class="btn primary" id="copy-letter" disabled>Copy letter</button>
+          <a class="btn ghost is-off" id="open-gmail" target="_blank" rel="noopener" aria-disabled="true" tabindex="-1">Open in Gmail</a>
+          <a class="btn ghost is-off" id="open-mail" aria-disabled="true" tabindex="-1">Open in Mail app</a>
+        </div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+        <div class="field fallback" id="fallback" hidden>
+          <label for="fallback-text">Your letter, selected and ready to copy</label>
+          <textarea id="fallback-text" readonly></textarea>
+        </div>
+        <p class="fine">Opening your email from this page doesn't work on every device. If nothing opens, copy the letter and paste it into a new email to the two addresses above, with the subject as shown.</p>
+        <p class="fine">This page doesn't store what you type. Sent it? Reply to my note so I can say thanks.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  var TO = 'bgarvey@cityofventura.ca.gov';
+  var CC = 'carmella@la-avenida.com';
+  var SUBJECT = 'Letter of Support — La Avenida — PROJ-26-1045 — October 19 Hearing';
+  var RE_LINE = "Re: La Avenida — PROJ-26-1045 — Director's Hearing, October 19, 2026";
+  var STORY = {
+    me: "Last September, I attended a 50th birthday party at La Avenida for my dear friend Kurt Daradics, and it was a highlight of my year. It was my first time at La Avenida, and I left glad to have found it. I want to support the venue so it can host many more evenings like Kurt's party.",
+    us: "Last September, we attended a 50th birthday party at La Avenida for our dear friend Kurt Daradics, and it was a highlight of our year. It was our first time at La Avenida, and we left glad to have found it. We want to support the venue so it can host many more evenings like Kurt's party."
+  };
+
+  function $(id) { return document.getElementById(id); }
+  var f = { name: $('name'), street: $('street'), zip: $('zip'), place: $('place'), line: $('line') };
+  var statusEl = $('status');
+  var lastAction = '';
+
+  $('v-to').textContent = TO;
+  $('v-cc').textContent = CC;
+  $('v-subject').textContent = SUBJECT;
+  f.line.value = STORY.me;
+
+  function who() {
+    var w = document.querySelector('input[name="who"]:checked');
+    return w && w.value === 'us' ? 'us' : 'me';
+  }
+
+  function isSuggested(text) {
+    var t = text.trim();
+    return t === STORY.me || t === STORY.us;
+  }
+
+  function read() {
+    var res = document.querySelector('input[name="resident"]:checked');
+    return {
+      us: who() === 'us',
+      name: f.name.value.trim(),
+      street: f.street.value.trim(),
+      zip: f.zip.value.trim(),
+      place: f.place.value.trim(),
+      line: f.line.value.trim(),
+      resident: !res || res.value === 'yes'
+    };
+  }
+
+  function missing(s) {
+    var m = [];
+    if (!s.name) m.push(s.us ? 'your names' : 'your name');
+    if (!s.resident && !s.place) m.push('where you live');
+    if (!s.line) m.push('your story');
+    return m;
+  }
+
+  function listWords(arr) {
+    if (arr.length < 2) return arr.join('');
+    return arr.slice(0, -1).join(', ') + ' and ' + arr[arr.length - 1];
+  }
+
+  function residentOpening(s) {
+    return s.us ? "We're Ventura residents writing in support of La Avenida." : "I'm a Ventura resident writing in support of La Avenida.";
+  }
+
+  function awayOpening(s, place) {
+    return s.us ? 'We live in ' + place + ", and we're writing in support of La Avenida." : 'I live in ' + place + ", and I'm writing in support of La Avenida.";
+  }
+
+  function closing(s) {
+    return 'Ventura is better for independent, locally run places like this, where friends and families can gather. ' +
+      (s.us ? 'We' : 'I') + ' respectfully ask that the Director approve the project.';
+  }
+
+  function cityLine(s) {
+    return s.resident ? 'Ventura, CA' + (s.zip ? ' ' + s.zip : '') : s.place;
+  }
+
+  function plainLetter(s) {
+    var sig = [s.name];
+    if (s.street) sig.push(s.street);
+    sig.push(cityLine(s));
+    return [
+      'Brian Garvey, Associate Planner', 'City of Ventura', '',
+      RE_LINE, '',
+      'Dear Mr. Garvey,', '',
+      s.resident ? residentOpening(s) : awayOpening(s, s.place), '',
+      s.line, '',
+      closing(s), '',
+      'Sincerely,'
+    ].concat(sig).join('\n');
+  }
+
+  function slot(text) {
+    var sp = document.createElement('span');
+    sp.className = 'slot';
+    sp.textContent = text;
+    return sp;
+  }
+
+  function fill(el, value, placeholder) {
+    el.textContent = '';
+    if (value) el.textContent = value; else el.appendChild(slot(placeholder));
+  }
+
+  function setLink(a, href) {
+    if (href) {
+      a.href = href;
+      a.classList.remove('is-off');
+      a.removeAttribute('aria-disabled');
+      a.removeAttribute('tabindex');
+    } else {
+      a.removeAttribute('href');
+      a.classList.add('is-off');
+      a.setAttribute('aria-disabled', 'true');
+      a.setAttribute('tabindex', '-1');
+    }
+  }
+
+  function say(msg, ok) {
+    statusEl.textContent = msg;
+    statusEl.classList.toggle('ok', !!ok);
+  }
+
+  function render() {
+    var s = read();
+    $('zip-field').hidden = !s.resident;
+    $('place-field').hidden = s.resident;
+    $('name-label').textContent = s.us ? 'Your names' : 'Full name';
+    f.name.placeholder = s.us ? 'e.g. Sam and Alex Rivera' : 'First and last name';
+
+    var op = $('p-opening');
+    op.textContent = '';
+    if (s.resident) {
+      op.textContent = residentOpening(s);
+    } else {
+      op.appendChild(document.createTextNode(s.us ? 'We live in ' : 'I live in '));
+      if (s.place) op.appendChild(document.createTextNode(s.place)); else op.appendChild(slot('where you live'));
+      op.appendChild(document.createTextNode(s.us ? ", and we're writing in support of La Avenida." : ", and I'm writing in support of La Avenida."));
+    }
+
+    fill($('p-line'), s.line, 'Your story');
+    $('p-closing').textContent = closing(s);
+    fill($('p-name'), s.name, s.us ? 'Your names' : 'Your name');
+    fill($('p-street'), s.street, 'Street address (optional)');
+
+    var city = $('p-city');
+    city.textContent = '';
+    if (s.resident) {
+      city.appendChild(document.createTextNode('Ventura, CA '));
+      if (s.zip) city.appendChild(document.createTextNode(s.zip)); else city.appendChild(slot('ZIP'));
+    } else if (s.place) {
+      city.textContent = s.place;
+    } else {
+      city.appendChild(slot('City, state'));
+    }
+
+    var miss = missing(s);
+    var ready = miss.length === 0;
+    $('copy-letter').disabled = !ready;
+
+    if (ready) {
+      var body = plainLetter(s);
+      setLink($('open-gmail'), 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(TO) +
+        '&cc=' + encodeURIComponent(CC) + '&su=' + encodeURIComponent(SUBJECT) + '&body=' + encodeURIComponent(body));
+      setLink($('open-mail'), 'mailto:' + TO + '?cc=' + encodeURIComponent(CC) + '&subject=' + encodeURIComponent(SUBJECT) +
+        '&body=' + encodeURIComponent(body.replace(/\n/g, '\r\n')));
+      if (!lastAction) say('Ready. Copy it, or open it in your email.', false);
+    } else {
+      setLink($('open-gmail'), null);
+      setLink($('open-mail'), null);
+      lastAction = '';
+      say('Add ' + listWords(miss) + ' to finish the letter.', false);
+    }
+  }
+
+  function showFallback(text) {
+    var box = $('fallback');
+    var ta = $('fallback-text');
+    ta.value = text;
+    box.hidden = false;
+    ta.focus();
+    ta.select();
+    say("Copying is blocked here, so the text is selected below. Use your device's copy command.", false);
+  }
+
+  function copy(text, okMsg, btn) {
+    var p = null;
+    try { p = navigator.clipboard && navigator.clipboard.writeText(text); } catch (e) { p = null; }
+    if (!p) { showFallback(text); return; }
+    p.then(function () {
+      lastAction = 'copied';
+      say(okMsg, true);
+      if (btn) {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1600);
+      }
+    }).catch(function () { showFallback(text); });
+  }
+
+  $('copy-letter').addEventListener('click', function () {
+    var s = read();
+    if (missing(s).length) return;
+    copy(plainLetter(s), 'Letter copied. Paste it into a new email to the addresses above.');
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (b) {
+    b.addEventListener('click', function () {
+      var v = { to: TO, cc: CC, subject: SUBJECT }[b.getAttribute('data-copy')];
+      copy(v, b.getAttribute('data-label') + ' copied.', b);
+    });
+  });
+
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="who"]'), function (r) {
+    r.addEventListener('change', function () {
+      if (isSuggested(f.line.value) || !f.line.value.trim()) f.line.value = STORY[who()];
+      render();
+    });
+  });
+
+  $('reset-story').addEventListener('click', function () {
+    f.line.value = STORY[who()];
+    f.line.focus();
+    render();
+  });
+
+  f.zip.addEventListener('input', function () {
+    var clean = f.zip.value.replace(/\D/g, '').slice(0, 5);
+    if (clean !== f.zip.value) f.zip.value = clean;
+  });
+
+  ['name', 'street', 'zip', 'place', 'line'].forEach(function (k) { f[k].addEventListener('input', render); });
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="resident"]'), function (r) { r.addEventListener('change', render); });
+  $('letter-form').addEventListener('submit', function (e) { e.preventDefault(); });
+
+  render();
+})();
+</script>
+</body>
+</html>
